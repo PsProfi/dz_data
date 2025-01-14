@@ -1,10 +1,18 @@
 import 'dart:io';
 
-void main() async {
-  String filePath = 'data.csv'; 
-  String content = '';
-  File file = File(filePath);
-   file.writeAsString(content);
-print('Файл створено і вміст записано успішно.');
+void main(List<String> arguments) {
+var file = File("data.csv");
+if (!file.existsSync()) {
+print ("File does not exist"); 
+return;
 }
-// файл для створення csv файлу або його перезапис
+
+var lines = file.readAsLinesSync();
+
+for (int i = 1; i < lines.length; i++) {
+var line = lines [i];
+var values = line.split(",");
+print (values.join(', '));
+}
+}
+// файл для обробки списку і видачі даних
