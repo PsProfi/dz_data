@@ -1,2 +1,2 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+Тема:
+"Топ 10 аніме зі всіх що попались під руку"
